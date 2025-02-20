@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { useRef } from "react";
+import About from "./Component/About";
+import Home from "./Component/Home";
+import Project from "./Component/Project";
+import Skills from "./Component/Skills";
+import Parent from "./Parent";
+import Contact from "./Component/Contact";
 
 function App() {
+  const sectionRef = {
+    home: useRef(null),
+    about: useRef(null),
+    skills: useRef(null),
+    project: useRef(null),
+    contact: useRef(null)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App font-['Poppins'] bg-[--background] h-full overflow-hidden">
+      <Parent dataRef={sectionRef}>
+        <Home IntoPage={sectionRef?.home} AboutPage={sectionRef}/>
+        <About IntoPage={sectionRef?.about}/>
+        <Skills  IntoPage={sectionRef?.skills}/>
+        <Project IntoPage={sectionRef?.project}/>
+        <Contact IntoPage={sectionRef?.contact}/>
+      </Parent>
     </div>
   );
 }

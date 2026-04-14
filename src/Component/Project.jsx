@@ -2,7 +2,8 @@ import ProjectComp from "./Project/ProjectComp"
 import SotoIcons from '../Assets/ProjectIcons/Soto.png'
 import WeatherIcons from '../Assets/ProjectIcons/cloudy.png'
 import AnimeIcons from '../Assets/ProjectIcons/otaku.png'
-import Fasilkom from '../Assets/ProjectIcons/Mercubuana.png'
+import WordCraft from '../Assets/ProjectIcons/IconWordCraft.png'
+import Tech from '../Assets/ProjectIcons/Tech.png'
 import { motion } from "framer-motion"
 
 const Project = ({IntoPage}) => {
@@ -58,13 +59,22 @@ const Project = ({IntoPage}) => {
                   
 
                 <ProjectComp
-                id={'Fasilkom'}
-                Title={'Fasilkom - Mercu Buana'}
-                Link={'https://fasilkom-mercu-buana.vercel.app/'}
-                Desc={'Sebuah Website yang memudahkan Mahasiswa, Dosen, Tata Usaha pada Fakultas Ilmu Komputer untuk Pendataan Program-Program Seperti MBKM,Capstone Project, Kerja Praktik dan Tugas Akhir dengan Transparan. Website ini menampilkan UI yang berbeda tiap User dan Fitur nya.'}
-                LinkRepo={'https://github.com/Lutfiarsya/FasilkomMercuBuana'}
-                LinkProject={'Sistem Manajemen Fasilkom'}
-                Img={Fasilkom}
+                id={'WordCraft'}
+                Title={'WordCraft-V1'}
+                Link={'https://word-craft-v1.vercel.app/'}
+                Desc={'Sebuah Website Gamifation untuk pembelajaran dasar dalam bahasa inggris berbasis game susun kartu. Player akan menyusun dan membentuk sebuah kalimat dengan syarat SPOK dalam bahasa inggris'}
+                LinkProject={'WordCraft-V1'}
+                Img={WordCraft}
+                delay={0.3}
+                />
+
+                <ProjectComp
+                id={'Tech'}
+                Title={'Tech-Product'}
+                Link={'https://tech-product-livid.vercel.app/'}
+                Desc={'Website produk IT yang menggunakan Three.js adalah situs interaktif berbasis web yang menampilkan produk teknologi (seperti hardware, software, atau layanan digital) dalam bentuk visual 3D yang menarik dan realistis. Dengan bantuan Three.js, website ini memungkinkan pengguna untuk melihat, memutar, memperbesar, dan mengeksplorasi produk secara langsung di browser tanpa perlu aplikasi tambahan.'}
+                LinkProject={'Tech-Product'}
+                Img={Tech}
                 delay={0.3}
                 />
             </div>

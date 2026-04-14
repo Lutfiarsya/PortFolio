@@ -27,8 +27,13 @@ const ProjectComp = ({ Title, Img, Desc, Link, LinkProject, id, LinkRepo, delay,
             </span>
           )}
         </div>
+
         <div className="w-11 h-11 bg-[#1e1e1e] border border-[#333] rounded-xl flex items-center justify-center">
-          <img src={Img} className='object-center object-contain'/>
+          <img 
+            src={Img} 
+            alt={Title || "project image"} 
+            className="object-center object-contain"
+          />
         </div>
       </div>
 
@@ -43,6 +48,7 @@ const ProjectComp = ({ Title, Img, Desc, Link, LinkProject, id, LinkRepo, delay,
       >
         <div className="px-5 pt-4 pb-5 flex flex-col gap-4">
           <p className="text-[12px] text-[#666] leading-relaxed line-clamp-4">{Desc}</p>
+
           <div className="flex items-center justify-between">
             <a
               href={Link}
@@ -54,6 +60,7 @@ const ProjectComp = ({ Title, Img, Desc, Link, LinkProject, id, LinkRepo, delay,
               {LinkProject}
               <Icon icon="mdi:arrow-top-right" width={12} />
             </a>
+
             <a
               href={LinkRepo}
               target="_blank"
